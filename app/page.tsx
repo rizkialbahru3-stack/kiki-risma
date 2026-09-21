@@ -3,7 +3,7 @@ import DayCounter from "./day-counter";
 
 // Isi tanggal jadian dengan format "YYYY-MM-DD" kalau sudah ada,
 // misal "2025-02-14". Selama null, section-nya tampil sebagai "menyusul".
-const ANNIVERSARY_DATE: string | null = null;
+const ANNIVERSARY_DATE: string | null = "2025-04-05";
 
 const photos = [
   {
