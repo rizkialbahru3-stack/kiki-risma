@@ -112,7 +112,7 @@ export default function Home() {
           <div className="mt-6 grid gap-4 sm:grid-cols-2">
             {profiles.map((p) => (
               <div key={p.name} className="overflow-hidden rounded-xl bg-zinc-50 dark:bg-zinc-900">
-                <div className="relative h-64 w-full">
+                <div className="relative aspect-[3/4] w-full">
                   <Image
                     src={p.photo}
                     alt={p.alt}
