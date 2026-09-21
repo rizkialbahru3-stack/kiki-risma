@@ -25,12 +25,14 @@ const photos = [
 
 const profiles = [
   {
-    initial: "K",
+    photo: "/foto-kiki.png",
+    alt: "Foto Kiki",
     name: "Kiki",
     desc: "Halo, aku Kiki — yang bikin halaman kecil ini spesial untuk kami berdua. Lahir 23 November 2007 (Sagitarius). Makanan kesukaanku sate kambing — aku tidak suka bakso, kecuali bakso aci.",
   },
   {
-    initial: "C",
+    photo: "/foto-risma.png",
+    alt: "Foto Risma (Cimol)",
     name: 'Risma "Cimol"',
     desc: "Halo, aku Risma, biasa dipanggil Cimol — partner setia Kiki di setiap momen. Warna kesukaanku pink dan ungu muda, makananku dimsum. Aku suka di-notice hal-hal kecil dan tidak suka dibentak. Lahir 4 Januari 2005 (Capricorn).",
   },
@@ -109,12 +111,20 @@ export default function Home() {
           </p>
           <div className="mt-6 grid gap-4 sm:grid-cols-2">
             {profiles.map((p) => (
-              <div key={p.name} className="rounded-xl bg-zinc-50 p-6 dark:bg-zinc-900">
-                <div className="flex h-14 w-14 items-center justify-center rounded-full bg-gradient-to-br from-rose-500 to-purple-600 text-2xl font-bold text-white">
-                  {p.initial}
+              <div key={p.name} className="overflow-hidden rounded-xl bg-zinc-50 dark:bg-zinc-900">
+                <div className="relative h-64 w-full">
+                  <Image
+                    src={p.photo}
+                    alt={p.alt}
+                    fill
+                    className="object-cover object-top"
+                    sizes="(max-width: 640px) 100vw, 50vw"
+                  />
                 </div>
-                <p className="mt-4 text-lg font-bold">{p.name}</p>
-                <p className="mt-1 text-sm leading-6 text-zinc-500">{p.desc}</p>
+                <div className="p-6">
+                  <p className="text-lg font-bold">{p.name}</p>
+                  <p className="mt-1 text-sm leading-6 text-zinc-500">{p.desc}</p>
+                </div>
               </div>
             ))}
           </div>
