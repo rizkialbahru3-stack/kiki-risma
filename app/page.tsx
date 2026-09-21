@@ -161,13 +161,13 @@ export default function Home() {
           <div className="mt-6 grid gap-6 lg:grid-cols-2">
             <div>
               <p className="mb-2 text-sm font-semibold">
-                Favorit Kiki — &ldquo;925&rdquo;
+                Favorit Kiki — &ldquo;bitterlove&rdquo;
               </p>
               <iframe
-                src="https://open.spotify.com/embed/track/7j5rUCk7XVVSd8HkxUgnDV"
+                src="https://open.spotify.com/embed/track/74OLXYsvpfmSgPCMMi898K"
                 width="100%"
                 height="152"
-                title="Spotify Embed: 925 (Favorit Kiki)"
+                title="Spotify Embed: bitterlove (Favorit Kiki)"
                 allow="autoplay; clipboard-write; encrypted-media; fullscreen; picture-in-picture"
                 loading="lazy"
                 className="rounded-xl"
