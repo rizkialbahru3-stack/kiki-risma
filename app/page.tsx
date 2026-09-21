@@ -27,12 +27,12 @@ const profiles = [
   {
     initial: "K",
     name: "Kiki",
-    desc: "Deskripsi menyusul — tulis cerita singkat tentang Kiki di sini.",
+    desc: "Halo, aku Kiki — yang bikin halaman kecil ini spesial untuk kami berdua.",
   },
   {
     initial: "C",
     name: 'Risma "Cimol"',
-    desc: "Deskripsi menyusul — tulis cerita singkat tentang Cimol di sini.",
+    desc: "Halo, aku Risma, biasa dipanggil Cimol — partner setia Kiki di setiap momen.",
   },
 ];
 
@@ -72,8 +72,8 @@ export default function Home() {
             </h1>
             <p className="mt-4 text-lg leading-8 text-zinc-600 dark:text-zinc-400">
               Ini adalah halaman kecil tentang kami berdua — Kiki dan Risma
-              yang biasa dipanggil Cimol. Deskripsi lengkapnya menyusul,
-              untuk sekarang nikmati dulu foto-foto kami.
+              yang biasa dipanggil Cimol. Kenalan lebih jauh di bawah dan
+              nikmati foto-foto kami.
             </p>
             <div className="mt-8 flex flex-col gap-3 sm:flex-row">
               <a
@@ -174,7 +174,9 @@ export default function Home() {
               />
             </div>
             <div>
-              <p className="mb-2 text-sm font-semibold">&ldquo;1000X&rdquo;</p>
+              <p className="mb-2 text-sm font-semibold">
+                Lagu kami — &ldquo;1000X&rdquo;
+              </p>
               <iframe
                 src="https://open.spotify.com/embed/track/6ksyG6PARbZD5j4WTMJ08G"
                 width="100%"
