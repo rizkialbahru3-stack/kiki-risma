@@ -175,13 +175,13 @@ export default function Home() {
             </div>
             <div>
               <p className="mb-2 text-sm font-semibold">
-                Lagu kami — &ldquo;1000X&rdquo;
+                Favorit Risma — &ldquo;1000X&rdquo;
               </p>
               <iframe
                 src="https://open.spotify.com/embed/track/6ksyG6PARbZD5j4WTMJ08G"
                 width="100%"
                 height="152"
-                title="Spotify Embed: 1000X"
+                title="Spotify Embed: 1000X (Favorit Risma)"
                 allow="autoplay; clipboard-write; encrypted-media; fullscreen; picture-in-picture"
                 loading="lazy"
                 className="rounded-xl"
