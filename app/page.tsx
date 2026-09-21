@@ -27,12 +27,12 @@ const profiles = [
   {
     initial: "K",
     name: "Kiki",
-    desc: "Halo, aku Kiki — yang bikin halaman kecil ini spesial untuk kami berdua.",
+    desc: "Halo, aku Kiki — yang bikin halaman kecil ini spesial untuk kami berdua. Lahir 23 November 2007.",
   },
   {
     initial: "C",
     name: 'Risma "Cimol"',
-    desc: "Halo, aku Risma, biasa dipanggil Cimol — partner setia Kiki di setiap momen.",
+    desc: "Halo, aku Risma, biasa dipanggil Cimol — partner setia Kiki di setiap momen. Warna kesukaanku pink dan ungu muda. Lahir 4 Januari 2005.",
   },
 ];
 
