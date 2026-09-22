@@ -6,6 +6,7 @@ const links = [
   { href: "#tentang", label: "Tentang" },
   { href: "#hari", label: "Hari" },
   { href: "#galeri", label: "Galeri" },
+  { href: "#surat", label: "Surat" },
   { href: "#musik", label: "Musik" },
 ];
 

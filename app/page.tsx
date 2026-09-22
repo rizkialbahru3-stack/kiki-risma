@@ -4,6 +4,7 @@ import DayCounter from "./day-counter";
 import EntryGate from "./entry-gate";
 import Gallery, { type GalleryPhoto } from "./gallery";
 import HeroVideo from "./hero-video";
+import LoveLetter from "./love-letter";
 import Navbar from "./navbar";
 
 // Isi tanggal jadian dengan format "YYYY-MM-DD" kalau sudah ada,
@@ -131,6 +132,7 @@ export default function Home() {
           </p>
           <Gallery photos={photos} />
         </section>
+        <LoveLetter />
         {/* Musik */}
         <section id="musik" className="pb-16">
           <h2 className="text-2xl font-bold">Musik Kami</h2>
