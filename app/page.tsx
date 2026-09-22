@@ -1,5 +1,6 @@
 import Image from "next/image";
 import DayCounter from "./day-counter";
+import EntryGate from "./entry-gate";
 import Gallery, { type GalleryPhoto } from "./gallery";
 import HeroVideo from "./hero-video";
 
@@ -49,6 +50,7 @@ const profiles = [
 export default function Home() {
   return (
     <div className="min-h-screen bg-zinc-50 text-zinc-900 dark:bg-black dark:text-zinc-100">
+      <EntryGate />
       {/* Navbar */}
       <header className="sticky top-0 z-10 border-b border-zinc-200 bg-white/80 backdrop-blur dark:border-zinc-800 dark:bg-black/80">
         <nav className="mx-auto flex max-w-5xl items-center justify-between px-6 py-4">
