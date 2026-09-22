@@ -3,6 +3,7 @@ import DayCounter from "./day-counter";
 import EntryGate from "./entry-gate";
 import Gallery, { type GalleryPhoto } from "./gallery";
 import HeroVideo from "./hero-video";
+import Navbar from "./navbar";
 
 // Isi tanggal jadian dengan format "YYYY-MM-DD" kalau sudah ada,
 // misal "2025-02-14". Selama null, section-nya tampil sebagai "menyusul".
@@ -51,26 +52,7 @@ export default function Home() {
   return (
     <div className="min-h-screen bg-zinc-50 text-zinc-900 dark:bg-black dark:text-zinc-100">
       <EntryGate />
-      {/* Navbar */}
-      <header className="sticky top-0 z-10 border-b border-zinc-200 bg-white/80 backdrop-blur dark:border-zinc-800 dark:bg-black/80">
-        <nav className="mx-auto flex max-w-5xl items-center justify-between px-6 py-4">
-          <a href="#" className="text-lg font-bold tracking-tight">
-            Kiki <span className="text-rose-500">&hearts;</span> Cimol
-          </a>
-          <div className="hidden gap-6 text-sm font-medium sm:flex">
-            <a href="#tentang" className="hover:text-rose-500">Tentang</a>
-            <a href="#hari" className="hover:text-rose-500">Hari</a>
-            <a href="#galeri" className="hover:text-rose-500">Galeri</a>
-            <a href="#musik" className="hover:text-rose-500">Musik</a>
-          </div>
-          <a
-            href="#galeri"
-            className="rounded-full bg-zinc-900 px-5 py-2 text-sm font-medium text-white hover:bg-zinc-700 dark:bg-white dark:text-black dark:hover:bg-zinc-300"
-          >
-            Lihat Galeri
-          </a>
-        </nav>
-      </header>
+      <Navbar />
 
       <main className="mx-auto max-w-5xl px-6">
         {/* Hero */}
