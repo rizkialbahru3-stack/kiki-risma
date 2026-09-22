@@ -1,25 +1,33 @@
 import Image from "next/image";
 import DayCounter from "./day-counter";
+import Gallery, { type GalleryPhoto } from "./gallery";
+import HeroVideo from "./hero-video";
 
 // Isi tanggal jadian dengan format "YYYY-MM-DD" kalau sudah ada,
 // misal "2025-02-14". Selama null, section-nya tampil sebagai "menyusul".
 const ANNIVERSARY_DATE: string | null = "2025-04-05";
 
-const photos = [
+const photos: GalleryPhoto[] = [
   {
     src: "/kami-2.png",
     alt: "Kiki dan Cimol duduk berdua di bangku taman",
     caption: "Santai berdua di taman",
+    location: "Taman",
+    date: null, // isi "YYYY-MM-DD" kalau ingat tanggalnya
   },
   {
     src: "/kami-1.png",
     alt: "Kiki dan Cimol mirror selfie",
     caption: "Mirror selfie",
+    location: "Mirror selfie",
+    date: null,
   },
   {
     src: "/kami-3.png",
     alt: "Kiki dan Cimol memakai batik, selfie di depan cermin",
     caption: "Kompak pakai batik",
+    location: "Acara batik",
+    date: null,
   },
 ];
 
@@ -92,15 +100,7 @@ export default function Home() {
               </a>
             </div>
           </div>
-          <div className="relative h-72 w-full max-w-sm overflow-hidden rounded-3xl shadow-xl ring-1 ring-zinc-200 dark:ring-zinc-800">
-            <Image
-              src="/kami-2.png"
-              alt="Kiki dan Cimol duduk berdua di bangku taman"
-              fill
-              className="object-cover"
-              priority
-            />
-          </div>
+          <HeroVideo />
         </section>
 
         {/* Tentang */}
@@ -140,27 +140,10 @@ export default function Home() {
         <section id="galeri" className="py-16">
           <h2 className="text-2xl font-bold">Galeri Kami</h2>
           <p className="mt-2 text-zinc-600 dark:text-zinc-400">
-            Beberapa momen favorit kami berdua.
+            Beberapa momen favorit kami berdua. Klik foto untuk zoom, geser
+            atau pakai tombol untuk pindah.
           </p>
-          <div className="mt-6 grid gap-6 sm:grid-cols-2 lg:grid-cols-3">
-            {photos.map((photo) => (
-              <article
-                key={photo.src}
-                className="flex flex-col overflow-hidden rounded-2xl bg-white shadow-sm ring-1 ring-zinc-200 transition hover:shadow-md dark:bg-zinc-950 dark:ring-zinc-800"
-              >
-                <div className="relative h-72 w-full">
-                  <Image
-                    src={photo.src}
-                    alt={photo.alt}
-                    fill
-                    className="object-cover"
-                    sizes="(max-width: 640px) 100vw, (max-width: 1024px) 50vw, 33vw"
-                  />
-                </div>
-                <p className="p-4 text-sm font-medium">{photo.caption}</p>
-              </article>
-            ))}
-          </div>
+          <Gallery photos={photos} />
         </section>
         {/* Musik */}
         <section id="musik" className="pb-16">
