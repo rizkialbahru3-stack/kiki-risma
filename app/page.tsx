@@ -1,4 +1,5 @@
 import Image from "next/image";
+import AnniversaryCountdown from "./anniversary-countdown";
 import DayCounter from "./day-counter";
 import EntryGate from "./entry-gate";
 import Gallery, { type GalleryPhoto } from "./gallery";
@@ -118,6 +119,7 @@ export default function Home() {
         <section id="hari" className="py-16 text-center">
           <h2 className="text-2xl font-bold">Menghitung Hari</h2>
           <DayCounter startDate={ANNIVERSARY_DATE} />
+          <AnniversaryCountdown startDate={ANNIVERSARY_DATE} />
         </section>
 
         {/* Galeri */}
