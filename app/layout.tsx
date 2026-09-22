@@ -12,11 +12,29 @@ const geistMono = Geist_Mono({
   subsets: ["latin"],
 });
 
+const siteUrl = process.env.VERCEL_URL
+  ? `https://${process.env.VERCEL_URL}`
+  : "http://localhost:3000";
+
 export const metadata: Metadata = {
+  metadataBase: new URL(siteUrl),
   title: "Kiki & Cimol",
   description:
     "Halaman kecil tentang Kiki dan Risma (Cimol) — cerita, galeri, dan lagu favorit kami berdua.",
   themeColor: "#e11d48",
+  openGraph: {
+    title: "Kiki ♥ Cimol",
+    description:
+      "Halaman kecil tentang kami berdua — kenalan, galeri, dan lagu favorit.",
+    images: [{ url: "/kami-2.png", width: 1200, height: 630 }],
+  },
+  twitter: {
+    card: "summary_large_image",
+    title: "Kiki ♥ Cimol",
+    description:
+      "Halaman kecil tentang kami berdua — kenalan, galeri, dan lagu favorit.",
+    images: ["/kami-2.png"],
+  },
 };
 
 export default function RootLayout({ children }: LayoutProps<"/">) {
