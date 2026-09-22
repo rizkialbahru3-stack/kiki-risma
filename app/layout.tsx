@@ -14,13 +14,15 @@ const geistMono = Geist_Mono({
 
 export const metadata: Metadata = {
   title: "Kiki & Cimol",
-  description: "Halaman tentang Kiki dan Risma (Cimol)",
+  description:
+    "Halaman kecil tentang Kiki dan Risma (Cimol) — cerita, galeri, dan lagu favorit kami berdua.",
+  themeColor: "#e11d48",
 };
 
 export default function RootLayout({ children }: LayoutProps<"/">) {
   return (
     <html
-      lang="en"
+      lang="id"
       className={`${geistSans.variable} ${geistMono.variable} h-full antialiased`}
     >
       <body className="min-h-full flex flex-col">{children}</body>

@@ -5,6 +5,7 @@ import { useEffect, useRef, useState } from "react";
 
 export default function HeroVideo() {
   const [failed, setFailed] = useState(false);
+  const [muted, setMuted] = useState(true);
   const videoRef = useRef<HTMLVideoElement>(null);
 
   useEffect(() => {
@@ -40,10 +41,26 @@ export default function HeroVideo() {
         muted
         loop
         playsInline
-        preload="auto"
+        preload="metadata"
         poster="/kami-2.png"
         onError={() => setFailed(true)}
       />
+      <button
+        type="button"
+        onClick={() => {
+          const v = videoRef.current;
+          const next = !muted;
+          setMuted(next);
+          if (v) {
+            v.muted = next;
+            if (!next) v.play().catch(() => {});
+          }
+        }}
+        aria-label={muted ? "Nyalakan suara video" : "Bisukan video"}
+        className="absolute right-3 bottom-3 rounded-full bg-black/60 px-3 py-1.5 text-xs font-semibold text-white hover:bg-black/80"
+      >
+        {muted ? "🔇" : "🔊"}
+      </button>
     </div>
   );
 }
